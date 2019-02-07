@@ -1,0 +1,27 @@
+<div class="container">
+        <h1> Gossips Project with Ruby on Rails</h1>
+        <br>
+        <h2> Cher visiteur 😊 <br> bienvenu sur notre site de Gossips Project</h2>
+        <br><br>
+    <%= link_to "Create a new gossip!", new_gossip_path, :class => "btn btn-dark btn-lg btn-block", :role => "button", :style => "margin-bottom: 5vh" %>
+
+		<% @gossips.each do |gossip| %>
+
+	<div class="card bg-light mb-2 border-info" style="margin-bottom: 2vh">
+		<div class="card-body">
+			<h4 class="card-title font-weight-bold playfair-relative"> <%= gossip.title.capitalize %> <span class="badge badge-info badgecustom"><%= Comment.where(gossip: gossip.id).count %> <span style="font-size: .8em">📝 </span></span></h4>
+			<div class="row">
+				<div class="col">
+					<p class="card-text text-danger"> <%= User.find(gossip.user_id).first_name %></p>
+				</div>
+
+				<div class="col text-right">
+					<%= link_to "Read more about the gossip ##{gossip.id}", gossip_path(gossip.id), :class => " btn btn-outline-success" %>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+<% end %>
+</div>

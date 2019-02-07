@@ -1,0 +1,55 @@
+      
+       <div class="container">
+       <p align="center" style="color:red;"> les champs avec * sont obligatoirs </p>
+      <div class="row justify-content-center align-items-center">
+     
+
+            <div class="col-md-8 col-sm-12">
+
+                  <%= form_tag url_for(action: 'create'), method: "post" do %>
+
+                    <div class="form-group">
+                      <%= label_tag 'First Name *' %>
+                      <%= text_field_tag 'first_name', "", :class => "form-control", :placeholder => "votre Prénom" %>
+                    </div>
+
+                    <div class="form-group">
+                      <%= label_tag 'Last Name *' %>
+                      <%= text_field_tag 'last_name', "", :class => "form-control", :placeholder => "votre Nom" %>
+                    </div>
+
+                    <div class="form-group">
+                      <%= label_tag 'Age' %>
+                      <%= text_field_tag 'age', "", :class => "form-control", :placeholder => "votre Age" %>
+                    </div>
+
+                    <div class="form-group">
+                      <%= label_tag 'Description' %>
+                      <%= text_area_tag 'description', "", :class => "form-control", :placeholder => "petite description de vous ", :rows => "2" %>
+                    </div>
+
+                    <div class=“form-group”>
+                       <%= label_tag 'City' %>
+                       <%= select_tag(:city_id, options_for_select(@cities), {:class => "form-control"}) %>
+                       <br/>
+                     </div>
+
+                    <div class="form-group">
+                      <%= label_tag 'Email *' %>
+                      <%= text_field_tag 'email', "", :class => "form-control", :placeholder => "adresse mial" %>
+                    </div>
+
+                    <div class="form-group">
+                      <%= label_tag 'Password' %>
+                      <%= text_field_tag 'password', "", :class => "form-control", :placeholder => "mot de passe", :type => "password" %>
+                      <small id="emailHelp" class="form-text text-muted">votre mot de passe doit avoir aumoins 6 caractères</small>
+                    </div>
+
+                    <%= submit_tag "Create User", :class => "btn btn-dark" %>
+
+                  <% end %>
+
+            </div>
+
+      </div>
+      </div>

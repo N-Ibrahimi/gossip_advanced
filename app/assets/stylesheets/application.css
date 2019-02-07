@@ -1,0 +1,82 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ .my-row {
+ 	height: 70vh;
+ }
+
+ .my-row-2 {
+ 	margin-top: 10vh;
+ }
+
+ .my-row-3 {
+ 	margin-top: 5vh;
+ }
+
+ .playfair {
+ 	font-family: 'Playfair Display', sans-serif !important;
+ }
+
+ .small-playfair {
+ 	font-family: 'Playfair Display', sans-serif !important;
+ 	font-size: .8em !important;
+ }
+
+ .footer {
+ 	position: relative;
+ 	bottom: 0;
+ 	width: 100%;
+ }
+
+  .playfair-relative {
+ 	font-family: 'Playfair Display', sans-serif !important;
+ 	position: relative;
+ }
+
+ .badgecustom {
+ 	font-size: .5em !important; 
+ 	font-family: sans-serif !important;
+ 	padding-bottom: 3px;
+ 	position: absolute;
+ 	top: 2px;
+ 	margin-left: 8px;
+ }
+
+
+
+body{ 
+	background-image: url("https://images.pexels.com/photos/988872/pexels-photo-988872.jpeg?auto=compress&cs=tinysrgb&h=650&w=940");
+	background-repeat: no-repeat;
+	background-size: 100%;
+	font-size: 15px;
+	background-attachment: fixed;
+  }
+  
+  h1 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 35px; 
+	font-weight: bolder;
+	text-shadow: 1px 2px 4px rgb(190, 158, 14);
+  }
+  h2 {
+	font-weight: bolder;
+	text-shadow: 1px 2px 4px rgb(190, 64, 14);
+  }
+  
+  h3 {
+  font-weight: bolder;
+  text-shadow: 1px 2px 4px rgb(146,216,58);
+  }
